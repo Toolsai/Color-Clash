@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower Defense Strategy Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <div class="player-info red-player">
+                <span class="player-name">AI Player (Red)</span>
+                <span class="player-gold">Gold: <span id="red-gold">0</span></span>
+            </div>
+            <div class="game-status" id="game-status">Game in progress</div>
+            <div class="player-info blue-player">
+                <span class="player-name">Player (Blue)</span>
+                <span class="player-gold">Gold: <span id="blue-gold">0</span></span>
+            </div>
+        </div>
+        
+        <div class="grid-container">
+            <div id="game-grid" class="game-grid"></div>
+            
+            <div id="action-panel" class="action-panel">
+                <button id="build-tower" class="action-button">Build Tower (10 Gold)</button>
+                <button id="upgrade-tower" class="action-button">Upgrade Tower (5 Gold)</button>
+                <button id="cancel-action" class="action-button">Cancel</button>
+            </div>
+        </div>
+        
+        <div id="game-over" class="game-over">
+            <div class="game-over-content">
+                <h2 id="winner-text">Player Wins!</h2>
+                <button id="restart-game">Play Again</button>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="config.js"></script>
+    <script type="module" src="tower-utils.js"></script>
+    <script type="module" src="bullet-utils.js"></script>
+    <script type="module" src="bullet-handlers.js"></script>
+    <script type="module" src="sound-utils.js"></script>
+    <script type="module" src="game-over-utils.js"></script>
+    <script type="module" src="ui-utils.js"></script>
+    <script type="module" src="ai-utils.js"></script>
+    <script type="module" src="game.js"></script>
+</body>
+</html>
